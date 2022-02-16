@@ -1,0 +1,24 @@
+<div id="tabla" class=" container position-center"  >
+    
+    <div>
+        <table class="table table-striped table-hover table-bordered" >
+            <thead>
+                <tr>
+                    <th class="titulo" scope="col" >ID</th>
+                    <th class="titulo" scope="col">Nombre</th>
+                    <th class="titulo" scope="col">Genero</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <tr *ngFor="let consulta of consultas ; index as i">
+                    <td>{{consulta.id}}</td>
+                    <td>{{consulta.name}}</td>
+                    <td>{{consulta.gender}}</td>
+                </tr>
+            </tbody>
+    
+        </table>
+    </div>
+</div>
+

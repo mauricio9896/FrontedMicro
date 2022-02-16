@@ -1,0 +1,46 @@
+<div class="container">
+
+    <img src = {{url}} alt="" width="100%" *ngIf="estado">
+
+    <div class="uk-position-top">
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+
+            <div class="uk-navbar-left">
+                <nav class="uk-navbar uk-navbar-container uk-margin">
+                    <div class="uk-navbar-left"> 
+                        <a class="uk-navbar-toggle nav-link" [routerLink]="['/menu']" (click)="estado = !estado">
+                            <span uk-navbar-toggle-icon></span> 
+                            <span class="uk-margin-small-left">Menu</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="uk-navbar-center">
+
+                <ul class="uk-navbar-nav">
+                    <li><a [routerLink]="['/home']" (click)="estado = true">Inicio</a></li>
+                    <li><a [routerLink]="">Servicios</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href="#">Serivcio1</a></li>
+                                <li><a href="#">Servicio2</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a class="nav-link" [routerLink]="['/consulta']" (click)="estado = false" >Consultas</a></li>
+                </ul>
+
+            </div>
+
+            <div class="uk-navbar-right">
+                <div class="uk-navbar-item">
+                    <form action="javascript:void(0)">
+                        <input class="uk-input uk-form-width-medium" type="text" placeholder="Input">
+                        <button class="uk-button uk-button-default " uk-icon="search"></button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
